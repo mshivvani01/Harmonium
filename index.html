@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harmony De Siigns | Creating Harmony At Home | Nungambakkam, Chennai</title>
+  <meta name="description" content="Harmony De Siigns — Premium luxury interior design studio in Nungambakkam, Chennai. Residential interiors, modular kitchens, pooja rooms, turnkey projects. 5★ rated." />
+  <meta name="keywords" content="interior design Chennai, luxury interiors Nungambakkam, modular kitchen Chennai, pooja room design, turnkey interiors Chennai" />
+  <meta property="og:title" content="Harmony De Siigns | Creating Harmony At Home" />
+  <meta property="og:description" content="Luxury interior design studio in Chennai crafting timeless, elegant homes." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Favicon SVG inline -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230F3D3E'/%3E%3Cellipse cx='32' cy='26' rx='6' ry='8' fill='none' stroke='%23D4AF37' stroke-width='1.5'/%3E%3Cellipse cx='22' cy='32' rx='6' ry='8' fill='none' stroke='%23D4AF37' stroke-width='1.5' transform='rotate(-30 22 32)'/%3E%3Cellipse cx='42' cy='32' rx='6' ry='8' fill='none' stroke='%23D4AF37' stroke-width='1.5' transform='rotate(30 42 32)'/%3E%3Cline x1='18' y1='44' x2='46' y2='44' stroke='%23D4AF37' stroke-width='1'/%3E%3Ctext x='32' y='58' font-family='serif' font-size='7' fill='%23E8DDD0' text-anchor='middle' letter-spacing='1'%3EHdS%3C/text%3E%3C/svg%3E" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green:   #0F3D3E;
+      --gold:    #D4AF37;
+      --gold-lt: #e8c84a;
+      --beige:   #E8DDD0;
+      --ivory:   #F8F6F2;
+      --brown:   #8B6B4A;
+      --charcoal:#1A1A1A;
+      --white:   #ffffff;
+      --grey:    #6b6b6b;
+      --ff-head: 'Playfair Display', serif;
+      --ff-acc:  'Cormorant Garamond', serif;
+      --ff-body: 'Inter', sans-serif;
+      --ease-luxury: cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: var(--ff-body);
+      background: var(--ivory);
+      color: var(--charcoal);
+      overflow-x: hidden;
+    }
+
+    /* ─── LOADER ─────────────────────────────────── */
+    #loader {
+      position: fixed; inset: 0; z-index: 9999;
+      background: var(--green);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      transition: opacity 0.8s ease, visibility 0.8s ease;
+    }
+    #loader.hidden { opacity: 0; visibility: hidden; }
+    .loader-logo {
+      display: flex; flex-direction: column; align-items: center; gap: 12px;
+      animation: loaderFade 0.6s ease forwards;
+    }
+    .loader-lotus { width: 56px; height: 56px; }
+    .loader-name {
+      font-family: var(--ff-head); font-size: 2.2rem; font-weight: 400;
+      color: var(--beige); letter-spacing: 0.08em; text-align: center;
+      line-height: 1.2;
+    }
+    .loader-tag {
+      font-family: var(--ff-acc); font-size: 0.85rem; font-weight: 300;
+      color: var(--gold); letter-spacing: 0.25em; text-transform: uppercase;
+      margin-top: 4px;
+    }
+    .loader-bar {
+      width: 160px; height: 1px; background: rgba(232,221,208,0.2);
+      margin-top: 32px; position: relative; overflow: hidden;
+    }
+    .loader-bar::after {
+      content: ''; position: absolute; left: -100%; top: 0;
+      width: 100%; height: 100%; background: var(--gold);
+      animation: loaderBar 1.8s var(--ease-luxury) forwards;
+    }
+    @keyframes loaderBar { to { left: 0; } }
+    @keyframes loaderFade { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+
+    /* ─── NAV ────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 900;
+      padding: 0 5vw;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 76px;
+      transition: background 0.4s ease, box-shadow 0.4s ease, height 0.3s ease;
+    }
+    nav.scrolled {
+      background: rgba(15,61,62,0.97);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 2px 32px rgba(0,0,0,0.18);
+      height: 64px;
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none;
+    }
+    .nav-logo-icon { width: 36px; height: 36px; flex-shrink: 0; }
+    .nav-logo-text {
+      font-family: var(--ff-head); font-size: 1.05rem; font-weight: 500;
+      color: var(--beige); letter-spacing: 0.04em; line-height: 1.1;
+    }
+    .nav-logo-text span { display: block; font-family: var(--ff-acc); font-size: 0.6rem; font-weight: 300; letter-spacing: 0.22em; color: var(--gold); text-transform: uppercase; }
+    .nav-links {
+      display: flex; gap: 36px; list-style: none;
+      align-items: center;
+    }
+    .nav-links a {
+      font-family: var(--ff-body); font-size: 0.78rem; font-weight: 400;
+      color: var(--beige); text-decoration: none; letter-spacing: 0.12em;
+      text-transform: uppercase;
+      position: relative; padding-bottom: 3px;
+      transition: color 0.3s;
+    }
+    .nav-links a::after {
+      content: ''; position: absolute; bottom: 0; left: 0;
+      width: 0; height: 1px; background: var(--gold);
+      transition: width 0.3s ease;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-cta {
+      background: transparent; border: 1px solid var(--gold);
+      color: var(--gold) !important; padding: 8px 20px !important;
+      border-radius: 0 !important; letter-spacing: 0.14em !important;
+      transition: background 0.3s, color 0.3s !important;
+    }
+    .nav-cta:hover { background: var(--gold) !important; color: var(--green) !important; }
+    .nav-cta::after { display: none !important; }
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px; cursor: pointer;
+      background: none; border: none; padding: 4px;
+    }
+    .hamburger span {
+      display: block; width: 24px; height: 1.5px; background: var(--beige);
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+    .mobile-menu {
+      display: none; position: fixed; top: 64px; left: 0; right: 0;
+      background: rgba(15,61,62,0.98); backdrop-filter: blur(16px);
+      padding: 32px 5vw 48px; z-index: 899;
+      flex-direction: column; gap: 0;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-family: var(--ff-body); font-size: 0.85rem; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--beige); text-decoration: none;
+      padding: 16px 0; border-bottom: 1px solid rgba(212,175,55,0.15);
+      transition: color 0.3s;
+    }
+    .mobile-menu a:hover { color: var(--gold); }
+
+    /* ─── HERO ───────────────────────────────────── */
+    #hero {
+      height: 100svh; min-height: 600px;
+      position: relative; overflow: hidden;
+    }
+    .hero-slides { position: absolute; inset: 0; }
+    .hero-slide {
+      position: absolute; inset: 0;
+      background-size: cover; background-position: center;
+      opacity: 0; transition: opacity 1.4s ease;
+      animation: kenBurns 8s ease-in-out infinite alternate;
+    }
+    .hero-slide.active { opacity: 1; }
+    @keyframes kenBurns {
+      from { transform: scale(1); }
+      to   { transform: scale(1.07); }
+    }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        160deg,
+        rgba(15,61,62,0.72) 0%,
+        rgba(26,26,26,0.45) 50%,
+        rgba(15,61,62,0.55) 100%
+      );
+    }
+    .hero-content {
+      position: relative; z-index: 2;
+      height: 100%; display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center; padding: 0 5vw;
+    }
+    .hero-eyebrow {
+      font-family: var(--ff-acc); font-size: 0.85rem; font-weight: 300;
+      color: var(--gold); letter-spacing: 0.3em; text-transform: uppercase;
+      margin-bottom: 20px;
+      opacity: 0; transform: translateY(20px);
+      animation: fadeUp 1s 0.3s ease forwards;
+    }
+    .hero-title {
+      font-family: var(--ff-head); font-size: clamp(2.6rem, 6vw, 5.2rem);
+      font-weight: 400; color: var(--white); line-height: 1.12;
+      letter-spacing: -0.01em; max-width: 860px;
+      opacity: 0; transform: translateY(28px);
+      animation: fadeUp 1s 0.6s ease forwards;
+    }
+    .hero-title em { font-style: italic; color: var(--gold); }
+    .hero-sub {
+      font-family: var(--ff-acc); font-size: clamp(1rem, 2vw, 1.35rem);
+      font-weight: 300; color: rgba(248,246,242,0.85);
+      margin-top: 20px; max-width: 580px; line-height: 1.6;
+      letter-spacing: 0.03em;
+      opacity: 0; transform: translateY(20px);
+      animation: fadeUp 1s 0.9s ease forwards;
+    }
+    .hero-divider {
+      width: 60px; height: 1px; background: var(--gold);
+      margin: 28px auto;
+      opacity: 0; animation: fadeIn 1s 1.1s ease forwards;
+    }
+    .hero-btns {
+      display: flex; flex-wrap: wrap; gap: 16px; justify-content: center;
+      opacity: 0; animation: fadeUp 1s 1.2s ease forwards;
+    }
+    .btn-primary {
+      background: var(--gold); color: var(--green);
+      font-family: var(--ff-body); font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      padding: 16px 38px; text-decoration: none;
+      border: 1px solid var(--gold);
+      transition: background 0.35s, color 0.35s, transform 0.2s;
+    }
+    .btn-primary:hover { background: transparent; color: var(--gold); transform: translateY(-2px); }
+    .btn-outline {
+      background: transparent; color: var(--white);
+      font-family: var(--ff-body); font-size: 0.75rem; font-weight: 500;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      padding: 16px 38px; text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.5);
+      transition: border-color 0.35s, color 0.35s, transform 0.2s;
+    }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+    .btn-whatsapp {
+      background: transparent; color: #25D366;
+      font-family: var(--ff-body); font-size: 0.75rem; font-weight: 500;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      padding: 16px 32px; text-decoration: none;
+      border: 1px solid rgba(37,211,102,0.5);
+      display: flex; align-items: center; gap: 8px;
+      transition: background 0.35s, color 0.35s, transform 0.2s;
+    }
+    .btn-whatsapp:hover { background: rgba(37,211,102,0.1); border-color: #25D366; transform: translateY(-2px); }
+    .hero-scroll {
+      position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+      opacity: 0; animation: fadeIn 1s 1.8s ease forwards;
+    }
+    .scroll-text {
+      font-family: var(--ff-body); font-size: 0.65rem; letter-spacing: 0.2em;
+      color: var(--gold); text-transform: uppercase;
+    }
+    .scroll-line {
+      width: 1px; height: 48px; background: var(--gold);
+      animation: scrollLine 2s ease-in-out infinite;
+    }
+    @keyframes scrollLine {
+      0%,100% { transform: scaleY(1); opacity: 1; }
+      50% { transform: scaleY(0.4); opacity: 0.4; }
+    }
+    .hero-rating {
+      position: absolute; bottom: 40px; right: 5vw;
+      display: flex; align-items: center; gap: 10px;
+      opacity: 0; animation: fadeIn 1s 2s ease forwards;
+    }
+    .stars { color: var(--gold); font-size: 0.8rem; letter-spacing: 2px; }
+    .rating-text {
+      font-family: var(--ff-body); font-size: 0.7rem; color: var(--beige);
+      letter-spacing: 0.08em;
+    }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    /* ─── SECTIONS GENERAL ───────────────────────── */
+    section { padding: 100px 5vw; }
+    .section-eyebrow {
+      font-family: var(--ff-acc); font-size: 0.82rem; font-weight: 300;
+      color: var(--gold); letter-spacing: 0.28em; text-transform: uppercase;
+      display: block; margin-bottom: 14px;
+    }
+    .section-title {
+      font-family: var(--ff-head); font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 400; color: var(--green); line-height: 1.18;
+      letter-spacing: -0.01em;
+    }
+    .section-title.light { color: var(--white); }
+    .section-title.gold  { color: var(--gold); }
+    .section-divider {
+      width: 48px; height: 1px; background: var(--gold);
+      margin: 24px 0 36px;
+    }
+    .section-divider.center { margin: 24px auto 36px; }
+    .section-sub {
+      font-family: var(--ff-acc); font-size: clamp(1rem, 1.6vw, 1.2rem);
+      font-weight: 300; color: var(--grey); line-height: 1.75;
+      max-width: 560px;
+    }
+    .section-sub.center { text-align: center; margin: 0 auto; }
+    .reveal {
+      opacity: 0; transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-left {
+      opacity: 0; transform: translateX(-40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .reveal-left.visible { opacity: 1; transform: translateX(0); }
+    .reveal-right {
+      opacity: 0; transform: translateX(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+    /* ─── ABOUT ──────────────────────────────────── */
+    #about { background: var(--ivory); }
+    .about-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 80px; align-items: center;
+      max-width: 1200px; margin: 0 auto;
+    }
+    .about-images {
+      display: grid; grid-template-columns: 1fr 1fr;
+      grid-template-rows: 280px 200px;
+      gap: 12px;
+    }
+    .about-img {
+      overflow: hidden; position: relative;
+    }
+    .about-img:first-child { grid-row: span 2; }
+    .about-img img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 0.8s var(--ease-luxury);
+    }
+    .about-img:hover img { transform: scale(1.06); }
+    .about-badge {
+      position: absolute; bottom: 20px; right: 20px;
+      background: var(--green); color: var(--gold);
+      padding: 14px 18px; text-align: center;
+    }
+    .badge-num {
+      font-family: var(--ff-head); font-size: 1.8rem; font-weight: 400;
+      line-height: 1; display: block;
+    }
+    .badge-label {
+      font-family: var(--ff-body); font-size: 0.6rem; letter-spacing: 0.15em;
+      text-transform: uppercase; display: block; margin-top: 4px;
+    }
+    .about-text p {
+      font-family: var(--ff-body); font-size: 0.95rem; line-height: 1.85;
+      color: var(--grey); margin-top: 16px;
+    }
+    .about-stats {
+      display: flex; gap: 40px; margin-top: 40px;
+    }
+    .stat-item {}
+    .stat-num {
+      font-family: var(--ff-head); font-size: 2.2rem; font-weight: 400;
+      color: var(--green); display: block;
+    }
+    .stat-label {
+      font-family: var(--ff-body); font-size: 0.72rem; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--gold); margin-top: 4px; display: block;
+    }
+
+    /* ─── SERVICES ───────────────────────────────── */
+    #services { background: var(--green); }
+    .services-head { text-align: center; margin-bottom: 60px; }
+    .services-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 2px; max-width: 1200px; margin: 0 auto;
+    }
+    .service-card {
+      background: rgba(248,246,242,0.04);
+      border: 1px solid rgba(212,175,55,0.15);
+      padding: 44px 36px;
+      transition: background 0.35s, border-color 0.35s, transform 0.35s;
+      position: relative; overflow: hidden;
+    }
+    .service-card::before {
+      content: ''; position: absolute; bottom: 0; left: 0;
+      width: 0; height: 2px; background: var(--gold);
+      transition: width 0.4s ease;
+    }
+    .service-card:hover {
+      background: rgba(212,175,55,0.07);
+      border-color: rgba(212,175,55,0.4);
+      transform: translateY(-4px);
+    }
+    .service-card:hover::before { width: 100%; }
+    .service-icon {
+      width: 44px; height: 44px; margin-bottom: 24px;
+      color: var(--gold);
+    }
+    .service-name {
+      font-family: var(--ff-head); font-size: 1.05rem; font-weight: 500;
+      color: var(--beige); margin-bottom: 12px;
+    }
+    .service-desc {
+      font-family: var(--ff-body); font-size: 0.83rem; line-height: 1.75;
+      color: rgba(232,221,208,0.65);
+    }
+
+    /* ─── PROJECTS ───────────────────────────────── */
+    #projects { background: var(--ivory); }
+    .projects-head { text-align: center; margin-bottom: 64px; }
+    .projects-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 20px; max-width: 1280px; margin: 0 auto;
+    }
+    .project-card {
+      position: relative; overflow: hidden; cursor: pointer;
+    }
+    .project-card:first-child {
+      grid-column: span 2; grid-row: span 2;
+    }
+    .project-card img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      min-height: 280px;
+      transition: transform 0.9s var(--ease-luxury);
+    }
+    .project-card:first-child img { min-height: 600px; }
+    .project-card:hover img { transform: scale(1.08); }
+    .project-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(15,61,62,0.88) 0%, transparent 55%);
+      opacity: 0; transition: opacity 0.45s ease;
+      display: flex; align-items: flex-end; padding: 28px;
+    }
+    .project-card:hover .project-overlay { opacity: 1; }
+    .project-label {
+      font-family: var(--ff-head); font-size: 1.1rem; font-weight: 400;
+      color: var(--white);
+    }
+    .project-label span {
+      display: block; font-family: var(--ff-body); font-size: 0.7rem;
+      letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold);
+      margin-bottom: 6px;
+    }
+
+    /* ─── GALLERY ────────────────────────────────── */
+    #gallery { background: var(--charcoal); padding-bottom: 80px; }
+    .gallery-head { text-align: center; margin-bottom: 48px; }
+    .gallery-filters {
+      display: flex; gap: 10px; justify-content: center;
+      flex-wrap: wrap; margin-bottom: 40px;
+    }
+    .filter-btn {
+      background: transparent; border: 1px solid rgba(212,175,55,0.35);
+      color: var(--beige); font-family: var(--ff-body); font-size: 0.7rem;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      padding: 9px 22px; cursor: pointer;
+      transition: background 0.3s, border-color 0.3s, color 0.3s;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--gold); border-color: var(--gold); color: var(--green);
+    }
+    .gallery-masonry {
+      columns: 3; column-gap: 14px;
+      max-width: 1280px; margin: 0 auto;
+    }
+    .gallery-item {
+      break-inside: avoid; margin-bottom: 14px;
+      overflow: hidden; cursor: pointer; position: relative;
+    }
+    .gallery-item img {
+      width: 100%; display: block;
+      transition: transform 0.7s var(--ease-luxury);
+    }
+    .gallery-item:hover img { transform: scale(1.06); }
+    .gallery-item::after {
+      content: '⤢'; position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      font-size: 1.8rem; color: var(--white); background: rgba(15,61,62,0.6);
+      width: 52px; height: 52px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      transition: transform 0.35s ease;
+    }
+    .gallery-item:hover::after { transform: translate(-50%, -50%) scale(1); }
+    /* Lightbox */
+    #lightbox {
+      display: none; position: fixed; inset: 0; z-index: 9998;
+      background: rgba(15,15,15,0.95); align-items: center; justify-content: center;
+    }
+    #lightbox.open { display: flex; }
+    #lightbox img {
+      max-width: 92vw; max-height: 90vh; object-fit: contain;
+      box-shadow: 0 40px 100px rgba(0,0,0,0.7);
+    }
+    .lightbox-close {
+      position: absolute; top: 28px; right: 36px;
+      color: var(--beige); font-size: 2rem; cursor: pointer; background: none; border: none;
+      transition: color 0.3s;
+    }
+    .lightbox-close:hover { color: var(--gold); }
+
+    /* ─── WHY CHOOSE US ──────────────────────────── */
+    #why { background: var(--beige); }
+    .why-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 40px; max-width: 1200px; margin: 60px auto 0;
+    }
+    .why-card {
+      padding: 40px 32px; background: var(--ivory);
+      border-top: 2px solid var(--gold);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .why-card:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(0,0,0,0.1); }
+    .why-num {
+      font-family: var(--ff-acc); font-size: 3rem; font-weight: 300;
+      color: rgba(212,175,55,0.3); line-height: 1; margin-bottom: 16px;
+    }
+    .why-title {
+      font-family: var(--ff-head); font-size: 1.1rem; font-weight: 500;
+      color: var(--green); margin-bottom: 12px;
+    }
+    .why-desc {
+      font-family: var(--ff-body); font-size: 0.85rem; line-height: 1.8;
+      color: var(--grey);
+    }
+
+    /* ─── TESTIMONIALS ───────────────────────────── */
+    #testimonials { background: var(--ivory); }
+    .testimonials-head { text-align: center; margin-bottom: 60px; }
+    .testimonials-track {
+      display: flex; gap: 24px; overflow: hidden;
+      max-width: 1200px; margin: 0 auto;
+    }
+    .testi-wrapper { overflow: hidden; flex: 1; }
+    .testi-slide {
+      display: none;
+    }
+    .testi-slide.active { display: block; }
+    .testi-card {
+      background: var(--ivory); border: 1px solid rgba(212,175,55,0.25);
+      padding: 48px 44px; position: relative;
+    }
+    .testi-quote {
+      font-family: var(--ff-acc); font-size: 4rem; font-weight: 300;
+      color: var(--gold); line-height: 0.6; display: block; margin-bottom: 20px;
+    }
+    .testi-text {
+      font-family: var(--ff-acc); font-size: 1.15rem; font-weight: 300;
+      color: var(--charcoal); line-height: 1.75; font-style: italic;
+      margin-bottom: 28px;
+    }
+    .testi-divider { width: 40px; height: 1px; background: var(--gold); margin-bottom: 20px; }
+    .testi-author { font-family: var(--ff-head); font-size: 0.95rem; color: var(--green); }
+    .testi-role { font-family: var(--ff-body); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-top: 4px; }
+    .testi-stars { color: var(--gold); font-size: 0.85rem; letter-spacing: 3px; margin-bottom: 20px; }
+    .testi-nav {
+      display: flex; justify-content: center; gap: 12px; margin-top: 36px;
+    }
+    .testi-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: rgba(212,175,55,0.3); border: none; cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .testi-dot.active { background: var(--gold); transform: scale(1.3); }
+    .testi-arrows {
+      display: flex; justify-content: center; gap: 16px; margin-top: 20px;
+    }
+    .testi-arrow {
+      background: none; border: 1px solid rgba(212,175,55,0.4);
+      color: var(--gold); width: 44px; height: 44px; cursor: pointer;
+      font-size: 1.2rem; transition: background 0.3s;
+    }
+    .testi-arrow:hover { background: var(--gold); color: var(--green); }
+
+    /* ─── CTA ────────────────────────────────────── */
+    #cta {
+      background: var(--green); text-align: center;
+      padding: 120px 5vw;
+    }
+    .cta-inner { max-width: 700px; margin: 0 auto; }
+    .cta-title {
+      font-family: var(--ff-head); font-size: clamp(2rem, 4.5vw, 3.5rem);
+      font-weight: 400; color: var(--white); line-height: 1.2; margin-bottom: 20px;
+    }
+    .cta-title em { font-style: italic; color: var(--gold); }
+    .cta-sub {
+      font-family: var(--ff-acc); font-size: 1.1rem; font-weight: 300;
+      color: rgba(232,221,208,0.8); margin-bottom: 48px; line-height: 1.6;
+    }
+    .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    /* ─── CONTACT ────────────────────────────────── */
+    #contact { background: var(--ivory); }
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 80px; max-width: 1200px; margin: 0 auto;
+    }
+    .contact-info h3 {
+      font-family: var(--ff-head); font-size: 1.3rem; color: var(--green);
+      margin-bottom: 32px;
+    }
+    .contact-detail {
+      display: flex; gap: 16px; align-items: flex-start;
+      margin-bottom: 28px;
+    }
+    .contact-icon {
+      width: 42px; height: 42px; background: var(--green);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; color: var(--gold);
+    }
+    .contact-detail-text { font-family: var(--ff-body); }
+    .contact-detail-text strong {
+      display: block; font-size: 0.7rem; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 4px;
+    }
+    .contact-detail-text a, .contact-detail-text span {
+      font-size: 0.92rem; color: var(--charcoal); text-decoration: none;
+      transition: color 0.3s;
+    }
+    .contact-detail-text a:hover { color: var(--green); }
+    .map-container {
+      margin-top: 32px; overflow: hidden; height: 240px;
+    }
+    .map-container iframe { width: 100%; height: 100%; border: 0; }
+
+    /* ─── INQUIRY FORM ───────────────────────────── */
+    .inquiry-form h3 {
+      font-family: var(--ff-head); font-size: 1.3rem; color: var(--green);
+      margin-bottom: 32px;
+    }
+    .form-group { margin-bottom: 22px; }
+    .form-group label {
+      display: block; font-family: var(--ff-body); font-size: 0.7rem;
+      letter-spacing: 0.14em; text-transform: uppercase; color: var(--grey);
+      margin-bottom: 8px;
+    }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; background: transparent;
+      border: 1px solid rgba(139,107,74,0.3); border-radius: 0;
+      padding: 14px 16px; font-family: var(--ff-body); font-size: 0.9rem;
+      color: var(--charcoal); outline: none;
+      transition: border-color 0.3s;
+      -webkit-appearance: none;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      border-color: var(--gold);
+    }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .btn-submit {
+      background: var(--green); color: var(--gold);
+      font-family: var(--ff-body); font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      padding: 18px 48px; border: 1px solid var(--green); cursor: pointer;
+      transition: background 0.35s, color 0.35s;
+      width: 100%; margin-top: 8px;
+    }
+    .btn-submit:hover { background: var(--gold); color: var(--green); border-color: var(--gold); }
+
+    /* ─── FOOTER ─────────────────────────────────── */
+    footer {
+      background: var(--charcoal); color: var(--beige);
+      padding: 64px 5vw 32px;
+    }
+    .footer-grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr;
+      gap: 60px; max-width: 1200px; margin: 0 auto;
+      padding-bottom: 48px; border-bottom: 1px solid rgba(212,175,55,0.15);
+    }
+    .footer-brand {}
+    .footer-logo-text {
+      font-family: var(--ff-head); font-size: 1.4rem; font-weight: 400;
+      color: var(--beige); letter-spacing: 0.05em; line-height: 1.2;
+    }
+    .footer-logo-tag {
+      font-family: var(--ff-acc); font-size: 0.72rem; font-weight: 300;
+      color: var(--gold); letter-spacing: 0.24em; text-transform: uppercase;
+      margin-top: 6px; display: block;
+    }
+    .footer-desc {
+      font-family: var(--ff-body); font-size: 0.83rem; line-height: 1.8;
+      color: rgba(232,221,208,0.55); margin-top: 20px; max-width: 300px;
+    }
+    .footer-col h4 {
+      font-family: var(--ff-body); font-size: 0.7rem; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 22px;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 12px; }
+    .footer-col ul li a {
+      font-family: var(--ff-body); font-size: 0.83rem; color: rgba(232,221,208,0.6);
+      text-decoration: none; transition: color 0.3s;
+    }
+    .footer-col ul li a:hover { color: var(--gold); }
+    .footer-bottom {
+      max-width: 1200px; margin: 28px auto 0;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 12px;
+    }
+    .footer-copy {
+      font-family: var(--ff-body); font-size: 0.75rem;
+      color: rgba(232,221,208,0.4); letter-spacing: 0.04em;
+    }
+    .footer-rating {
+      display: flex; align-items: center; gap: 8px;
+    }
+    .footer-stars { color: var(--gold); font-size: 0.75rem; letter-spacing: 2px; }
+    .footer-rating-text {
+      font-family: var(--ff-body); font-size: 0.72rem; color: rgba(232,221,208,0.4);
+    }
+
+    /* ─── WHATSAPP FLOAT ─────────────────────────── */
+    .wa-float {
+      position: fixed; bottom: 32px; right: 32px; z-index: 800;
+      width: 56px; height: 56px; background: #25D366;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      text-decoration: none; box-shadow: 0 8px 32px rgba(37,211,102,0.4);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .wa-float:hover { transform: scale(1.12); box-shadow: 0 12px 40px rgba(37,211,102,0.55); }
+    .wa-float svg { width: 28px; height: 28px; fill: white; }
+
+    /* ─── RESPONSIVE ─────────────────────────────── */
+    @media (max-width: 1024px) {
+      .projects-grid { grid-template-columns: 1fr 1fr; }
+      .project-card:first-child { grid-column: span 2; }
+      .gallery-masonry { columns: 2; }
+      .why-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      section { padding: 72px 5vw; }
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .about-grid { grid-template-columns: 1fr; gap: 48px; }
+      .about-images { grid-template-rows: 240px 180px; }
+      .about-stats { gap: 24px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .projects-grid { grid-template-columns: 1fr; }
+      .project-card:first-child { grid-column: auto; grid-row: auto; }
+      .gallery-masonry { columns: 2; }
+      .why-grid { grid-template-columns: 1fr; gap: 24px; }
+      .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 36px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+      .form-row { grid-template-columns: 1fr; }
+      .hero-rating { display: none; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-btns { flex-direction: column; align-items: center; }
+      .btn-primary, .btn-outline, .btn-whatsapp { width: 260px; justify-content: center; }
+      .gallery-masonry { columns: 1; }
+      .about-images { display: block; }
+      .about-img { height: 240px; margin-bottom: 12px; }
+      .about-img:first-child { height: 280px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-logo">
+    <svg class="loader-lotus" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="28" cy="22" rx="6" ry="9" stroke="#D4AF37" stroke-width="1.5"/>
+      <ellipse cx="17" cy="29" rx="6" ry="9" stroke="#D4AF37" stroke-width="1.5" transform="rotate(-35 17 29)"/>
+      <ellipse cx="39" cy="29" rx="6" ry="9" stroke="#D4AF37" stroke-width="1.5" transform="rotate(35 39 29)"/>
+      <line x1="13" y1="41" x2="43" y2="41" stroke="#D4AF37" stroke-width="1"/>
+    </svg>
+    <div class="loader-name">Harmony De Siigns</div>
+    <div class="loader-tag">Creating Harmony At Home</div>
+  </div>
+  <div class="loader-bar"></div>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">
+    <svg class="nav-logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="18" cy="14" rx="4" ry="5.5" stroke="#D4AF37" stroke-width="1.2"/>
+      <ellipse cx="10.5" cy="18.5" rx="4" ry="5.5" stroke="#D4AF37" stroke-width="1.2" transform="rotate(-35 10.5 18.5)"/>
+      <ellipse cx="25.5" cy="18.5" rx="4" ry="5.5" stroke="#D4AF37" stroke-width="1.2" transform="rotate(35 25.5 18.5)"/>
+      <line x1="8" y1="27" x2="28" y2="27" stroke="#D4AF37" stroke-width="0.8"/>
+    </svg>
+    <div class="nav-logo-text">
+      Harmony De Siigns
+      <span>Creating Harmony At Home</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#contact" class="nav-cta">Enquire</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#services" onclick="closeMenu()">Services</a>
+  <a href="#projects" onclick="closeMenu()">Projects</a>
+  <a href="#gallery" onclick="closeMenu()">Gallery</a>
+  <a href="#testimonials" onclick="closeMenu()">Reviews</a>
+  <a href="#contact" onclick="closeMenu()">Contact & Enquire</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-slides" id="heroSlides">
+    <div class="hero-slide active" style="background-image:url('Deepak_Shalini_page-0010.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('Deepak_Shalini_page-0008.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('Deepak_Shalini_page-0012.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('Deepak_Shalini_page-0006.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('Deepak_Shalini_page-0019.jpg')"></div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Nungambakkam, Chennai &nbsp;·&nbsp; Est. in Excellence</p>
+    <h1 class="hero-title">Designing Homes That<br><em>Inspire Harmony</em></h1>
+    <p class="hero-sub">Luxury interiors crafted with precision, elegance, and timeless beauty.</p>
+    <div class="hero-divider"></div>
+    <div class="hero-btns">
+      <a href="#projects" class="btn-primary">Explore Projects</a>
+      <a href="#contact" class="btn-outline">Get Free Estimate</a>
+      <a href="https://wa.me/919944841833?text=Hello%20Harmony%20De%20Siigns%2C%20I%20would%20like%20to%20discuss%20my%20interior%20project." class="btn-whatsapp" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+        WhatsApp Us
+      </a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span class="scroll-text">Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+  <div class="hero-rating">
+    <div class="stars">★★★★★</div>
+    <div class="rating-text">5.0 · 26 Google Reviews</div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-images reveal-left">
+      <div class="about-img">
+        <img src="Deepak_Shalini_page-0003.jpg" alt="Luxury foyer design by Harmony De Siigns" loading="lazy" />
+        <div class="about-badge">
+          <span class="badge-num">5★</span>
+          <span class="badge-label">Google Rating</span>
+        </div>
+      </div>
+      <div class="about-img">
+        <img src="Deepak_Shalini_page-0007.jpg" alt="Living room interior" loading="lazy" />
+      </div>
+      <div class="about-img">
+        <img src="Deepak_Shalini_page-0015.jpg" alt="Pooja room design" loading="lazy" />
+      </div>
+    </div>
+    <div class="about-text reveal-right">
+      <span class="section-eyebrow">Our Philosophy</span>
+      <h2 class="section-title">Where Spaces Become <em style="font-style:italic;color:var(--gold)">Sanctuaries</em></h2>
+      <div class="section-divider"></div>
+      <p>At Harmony De Siigns, we believe a home should be a reflection of its owners' soul — a curated world where every material choice, every curve of light, and every detail speaks of refinement and intention.</p>
+      <p>Based in Nungambakkam, Chennai, our studio brings together architectural precision and artistic warmth to create interiors that endure far beyond trends. From marble-clad living rooms to intricately carved pooja spaces, we craft spaces that breathe harmony.</p>
+      <div class="about-stats">
+        <div class="stat-item">
+          <span class="stat-num">50+</span>
+          <span class="stat-label">Projects Delivered</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">5★</span>
+          <span class="stat-label">Client Rating</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">100%</span>
+          <span class="stat-label">Satisfaction</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="services-head reveal">
+    <span class="section-eyebrow">What We Craft</span>
+    <h2 class="section-title light">Our Services</h2>
+    <div class="section-divider center"></div>
+    <p class="section-sub center" style="color:rgba(232,221,208,0.7)">From concept to completion, every space designed with obsessive attention to detail and premium craftsmanship.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <svg class="service-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.2">
+        <rect x="6" y="10" width="32" height="26" rx="1"/>
+        <path d="M6 18h32M16 10v8M28 10v8"/>
+      </svg>
+      <div class="service-name">Residential Interiors</div>
+      <p class="service-desc">Complete home transformations with a luxury sensibility — from concept boards to final installation.</p>
+    </div>
+    <div class="service-card reveal">
+      <svg class="service-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.2">
+        <rect x="4" y="14" width="36" height="20" rx="1"/>
+        <rect x="4" y="10" width="36" height="4"/>
+        <path d="M12 34v4M32 34v4M14 22h16M14 27h10"/>
+      </svg>
+      <div class="service-name">Modular Kitchen</div>
+      <p class="service-desc">Precision-engineered kitchens with premium materials, ergonomic layouts, and exquisite finishes.</p>
+    </div>
+    <div class="service-card reveal">
+      <svg class="service-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.2">
+        <path d="M6 36V20l16-12 16 12v16"/>
+        <rect x="16" y="24" width="12" height="12"/>
+        <path d="M22 24v12"/>
+      </svg>
+      <div class="service-name">Living Room Design</div>
+      <p class="service-desc">Statement living spaces defined by thoughtful furniture curation, bespoke joinery and artful lighting.</p>
+    </div>
+    <div class="service-card reveal">
+      <svg class="service-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.2">
+        <rect x="6" y="16" width="32" height="22" rx="2"/>
+        <path d="M6 20h32M12 16v-4a10 10 0 0 1 20 0v4"/>
+      </svg>
+      <div class="service-name">Bedroom Design</div>
+      <p class="service-desc">Serene, sensory retreats crafted around texture, tone and quiet luxury for restorative rest.</p>
+    </div>
+    <div class="service-card reveal">
+      <svg class="service-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.2">
+        <circle cx="22" cy="20" r="10"/>
+        <path d="M22 30v8M14 36h16M10 20H6M38 20h-4"/>
+        <path d="M14.1 12.1l-3-3M32.9 12.1l3-3"/>
+      </svg>
+      <div class="service-name">Pooja Rooms</div>
+      <p class="service-desc">Sacred spaces of exceptional craftsmanship — carved teak, backlit marble and devotional detail.</p>
+    </div>
+    <div class="service-card reveal">
+      <svg class="service-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.2">
+        <rect x="4" y="8" width="36" height="28" rx="1"/>
+        <path d="M4 16h36M12 8v8M22 8v8M32 8v8M12 24h4M20 24h4M28 24h4M12 30h4M20 30h4M28 30h4"/>
+      </svg>
+      <div class="service-name">Dining Areas</div>
+      <p class="service-desc">Dining spaces designed as a theatre of hospitality — sculptural furniture, layered lighting.</p>
+    </div>
+    <div class="service-card reveal">
+      <svg class="service-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.2">
+        <path d="M22 4L4 16v24h14V28h8v12h14V16L22 4z"/>
+      </svg>
+      <div class="service-name">Turnkey Projects</div>
+      <p class="service-desc">End-to-end project management — a single point of responsibility from design to delivery.</p>
+    </div>
+    <div class="service-card reveal">
+      <svg class="service-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.2">
+        <path d="M8 36V24l14-16 14 16v12"/>
+        <path d="M4 36h36M18 36v-8h8v8"/>
+        <path d="M14 24h4M26 24h4M14 30h4M26 30h4"/>
+      </svg>
+      <div class="service-name">Renovation</div>
+      <p class="service-desc">Sensitive, intelligent renovation that honours a home's character while elevating every space.</p>
+    </div>
+    <div class="service-card reveal">
+      <svg class="service-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.2">
+        <rect x="6" y="8" width="32" height="22" rx="1"/>
+        <path d="M6 14h32M14 8v6M30 8v6"/>
+        <path d="M12 20h8M12 25h16M16 36l6-6 6 6M22 30v8"/>
+      </svg>
+      <div class="service-name">3D Visualisation</div>
+      <p class="service-desc">Photorealistic renders letting you walk through your future home before a single nail is driven.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="projects-head reveal">
+    <span class="section-eyebrow">Selected Work</span>
+    <h2 class="section-title">Signature Projects</h2>
+    <div class="section-divider center"></div>
+    <p class="section-sub center">Each project is a unique collaboration — a home built around the lives lived within it.</p>
+  </div>
+  <div class="projects-grid">
+    <div class="project-card reveal">
+      <img src="Deepak_Shalini_page-0008.jpg" alt="Luxury living room - marble TV wall" loading="lazy" />
+      <div class="project-overlay">
+        <div class="project-label">
+          <span>Living Room</span>
+          Marble Feature Wall with Backlit Reeded Panels
+        </div>
+      </div>
+    </div>
+    <div class="project-card reveal">
+      <img src="Deepak_Shalini_page-0003.jpg" alt="Designer foyer entrance" loading="lazy" />
+      <div class="project-overlay">
+        <div class="project-label">
+          <span>Foyer</span>
+          Bespoke Entry with Brass Grid Partition
+        </div>
+      </div>
+    </div>
+    <div class="project-card reveal">
+      <img src="Deepak_Shalini_page-0019.jpg" alt="Open-plan dining" loading="lazy" />
+      <div class="project-overlay">
+        <div class="project-label">
+          <span>Dining</span>
+          Open-Plan Dining & Kitchen Zone
+        </div>
+      </div>
+    </div>
+    <div class="project-card reveal">
+      <img src="Deepak_Shalini_page-0015.jpg" alt="Traditional pooja room" loading="lazy" />
+      <div class="project-overlay">
+        <div class="project-label">
+          <span>Pooja Room</span>
+          Hand-Carved Teak Mandir with Marble Backdrop
+        </div>
+      </div>
+    </div>
+    <div class="project-card reveal">
+      <img src="Deepak_Shalini_page-0013.jpg" alt="Modular kitchen" loading="lazy" />
+      <div class="project-overlay">
+        <div class="project-label">
+          <span>Kitchen</span>
+          Classic White Shaker Kitchen with Patterned Tile
+        </div>
+      </div>
+    </div>
+    <div class="project-card reveal">
+      <img src="Deepak_Shalini_page-0011.jpg" alt="Vanity area" loading="lazy" />
+      <div class="project-overlay">
+        <div class="project-label">
+          <span>Bathroom Vanity</span>
+          Calacatta Marble Wall & Backlit Mirror
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="gallery-head reveal">
+    <span class="section-eyebrow" style="color:var(--gold)">Browse Our Work</span>
+    <h2 class="section-title light">Gallery</h2>
+    <div class="section-divider center"></div>
+  </div>
+  <div class="gallery-filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="living">Living Room</button>
+    <button class="filter-btn" data-filter="kitchen">Kitchen</button>
+    <button class="filter-btn" data-filter="dining">Dining</button>
+    <button class="filter-btn" data-filter="pooja">Pooja Room</button>
+    <button class="filter-btn" data-filter="decor">Decor</button>
+  </div>
+  <div class="gallery-masonry" id="galleryMasonry">
+    <div class="gallery-item" data-cat="living" onclick="openLightbox(this)">
+      <img src="Deepak_Shalini_page-0008.jpg" alt="Living room" loading="lazy"/>
+    </div>
+    <div class="gallery-item" data-cat="living" onclick="openLightbox(this)">
+      <img src="Deepak_Shalini_page-0009.jpg" alt="Living room view" loading="lazy"/>
+    </div>
+    <div class="gallery-item" data-cat="decor" onclick="openLightbox(this)">
+      <img src="Deepak_Shalini_page-0003.jpg" alt="Foyer partition" loading="lazy"/>
+    </div>
+    <div class="gallery-item" data-cat="decor" onclick="openLightbox(this)">
+      <img src="Deepak_Shalini_page-0004.jpg" alt="Brass grid partition" loading="lazy"/>
+    </div>
+    <div class="gallery-item" data-cat="decor" onclick="openLightbox(this)">
+      <img src="Deepak_Shalini_page-0005.jpg" alt="Foyer console" loading="lazy"/>
+    </div>
+    <div class="gallery-item" data-cat="living" onclick="openLightbox(this)">
+      <img src="Deepak_Shalini_page-0006.jpg" alt="Luxury living" loading="lazy"/>
+    </div>
+    <div class="gallery-item" data-cat="living" onclick="openLightbox(this)">
+      <img src="Deepak_Shalini_page-0007.jpg" alt="Open-plan living" loading="lazy"/>
+    </div>
+    <div class="gallery-item" data-cat="living" onclick="openLightbox(this)">
+      <img src="Deepak_Shalini_page-0010.jpg" alt="Grand living room" loading="lazy"/>
+    </div>
+    <div class="gallery-item" data-cat="decor" onclick="openLightbox(this)">
+      <img src="Deepak_Shalini_page-0011.jpg" alt="Vanity mirror" loading="lazy"/>
+    </div>
+    <div class="gallery-item" data-cat="kitchen" onclick="openLightbox(this)">
+      <img src="Deepak_Shalini_page-0012.jpg" alt="White modular kitchen" loading="lazy"/>
+    </div>
+    <div class="gallery-item" data-cat="kitchen" onclick="openLightbox(this)">
+      <img src="Deepak_Shalini_page-0013.jpg" alt="Kitchen side view" loading="lazy"/>
+    </div>
+    <div class="gallery-item" data-cat="pooja" onclick="openLightbox(this)">
+      <img src="Deepak_Shalini_page-0014.jpg" alt="Traditional pooja room" loading="lazy"/>
+    </div>
+    <div class="gallery-item" data-cat="pooja" onclick="openLightbox(this)">
+      <img src="Deepak_Shalini_page-0015.jpg" alt="Pooja mandir overview" loading="lazy"/>
+    </div>
+    <div class="gallery-item" data-cat="living" onclick="openLightbox(this)">
+      <img src="Deepak_Shalini_page-0016.jpg" alt="Aquarium niche" loading="lazy"/>
+    </div>
+    <div class="gallery-item" data-cat="dining" onclick="openLightbox(this)">
+      <img src="Deepak_Shalini_page-0018.jpg" alt="Dining area" loading="lazy"/>
+    </div>
+    <div class="gallery-item" data-cat="dining" onclick="openLightbox(this)">
+      <img src="Deepak_Shalini_page-0019.jpg" alt="Open dining" loading="lazy"/>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img id="lightboxImg" src="" alt="Harmony De Siigns Project" />
+</div>
+
+<!-- WHY CHOOSE US -->
+<section id="why">
+  <div style="text-align:center;margin-bottom:0" class="reveal">
+    <span class="section-eyebrow">Why Harmony De Siigns</span>
+    <h2 class="section-title">The Harmony Difference</h2>
+    <div class="section-divider center"></div>
+    <p class="section-sub center">Six principles that define every project we take on.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-card reveal">
+      <div class="why-num">01</div>
+      <div class="why-title">Obsessive Attention to Detail</div>
+      <p class="why-desc">We treat every joint, edge profile and material transition as an opportunity — because the quality of a space is felt in the details most people never consciously notice.</p>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-num">02</div>
+      <div class="why-title">Premium Materials Only</div>
+      <p class="why-desc">We source from trusted suppliers: solid teak, Calacatta marble, brushed brass hardware and premium laminates — materials that age beautifully and stand the test of time.</p>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-num">03</div>
+      <div class="why-title">On-Time Delivery</div>
+      <p class="why-desc">Your timeline is a commitment we honour. Our project management system tracks every milestone, sub-contractor and delivery to ensure handover happens as promised.</p>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-num">04</div>
+      <div class="why-title">Personalised Design</div>
+      <p class="why-desc">No two homes are the same. We listen deeply, study how you live, and produce designs that are uniquely yours — not adapted templates from a catalogue.</p>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-num">05</div>
+      <div class="why-title">Luxury Finishes</div>
+      <p class="why-desc">From oil-rubbed wood doors to hand-polished stone countertops — our finishing standards rival boutique hotels and high-end residential developments worldwide.</p>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-num">06</div>
+      <div class="why-title">End-to-End Satisfaction</div>
+      <p class="why-desc">We stay with you from first sketch to final snagging — and beyond. Our relationship with clients doesn't end at handover; it's the start of a lasting partnership.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="testimonials-head reveal">
+    <span class="section-eyebrow">Client Stories</span>
+    <h2 class="section-title">What Our Clients Say</h2>
+    <div class="section-divider center"></div>
+  </div>
+  <div style="max-width:800px;margin:0 auto">
+    <div class="testi-wrapper">
+      <div class="testi-slide active">
+        <div class="testi-card">
+          <span class="testi-quote">&ldquo;</span>
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">Harmony De Siigns transformed our 3BHK in Nungambakkam into something we dreamed about for years. The pooja room alone is worth every rupee — the teak carving and marble backdrop left every guest speechless. Absolutely world-class team.</p>
+          <div class="testi-divider"></div>
+          <div class="testi-author">Deepak & Shalini R.</div>
+          <div class="testi-role">Homeowners, Nungambakkam</div>
+        </div>
+      </div>
+      <div class="testi-slide">
+        <div class="testi-card">
+          <span class="testi-quote">&ldquo;</span>
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">The attention to detail is extraordinary. Every corner of our home tells a story — from the brass grid partition at the entrance to the backlit marble TV wall. We kept visiting the site just to see the progress. Worth every bit of trust we placed in them.</p>
+          <div class="testi-divider"></div>
+          <div class="testi-author">Ramesh & Priya K.</div>
+          <div class="testi-role">Homeowners, Anna Nagar</div>
+        </div>
+      </div>
+      <div class="testi-slide">
+        <div class="testi-card">
+          <span class="testi-quote">&ldquo;</span>
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">We gave them a blank canvas and they gave us a palace. The kitchen design is functional yet so elegant — the white shaker cabinets with Portuguese tiles and brass handles is exactly the vibe we were after. Delivered on time, no drama. Highly recommend.</p>
+          <div class="testi-divider"></div>
+          <div class="testi-author">Vikram & Divya S.</div>
+          <div class="testi-role">Homeowners, Adyar</div>
+        </div>
+      </div>
+      <div class="testi-slide">
+        <div class="testi-card">
+          <span class="testi-quote">&ldquo;</span>
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">The 3D visualisations they provided before execution made us so confident. What we saw on screen is exactly what we got — or even better. Our living room with the indoor swing, aquarium niche and chandelier is unlike anything I've seen in Chennai.</p>
+          <div class="testi-divider"></div>
+          <div class="testi-author">Arun & Meghna T.</div>
+          <div class="testi-role">Homeowners, Velachery</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-arrows">
+      <button class="testi-arrow" onclick="changeSlide(-1)">&#8592;</button>
+      <button class="testi-arrow" onclick="changeSlide(1)">&#8594;</button>
+    </div>
+    <div class="testi-nav" id="testiDots"></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="cta-inner reveal">
+    <span class="section-eyebrow" style="text-align:center;display:block">Start Your Journey</span>
+    <h2 class="cta-title">Ready to Live in a Home That <em>Inspires You?</em></h2>
+    <p class="cta-sub">Let's start with a conversation. Share your vision and receive a free design consultation. No obligation — just the beginning of something beautiful.</p>
+    <div class="cta-btns">
+      <a href="https://wa.me/919944841833?text=Hello%20Harmony%20De%20Siigns%2C%20I%20would%20like%20to%20discuss%20my%20interior%20design%20project." class="btn-primary" target="_blank" rel="noopener">
+        WhatsApp Us Now
+      </a>
+      <a href="tel:+919944841833" class="btn-outline">Call +91 99448 41833</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div style="text-align:center;margin-bottom:64px" class="reveal">
+    <span class="section-eyebrow">Reach Us</span>
+    <h2 class="section-title">Get In Touch</h2>
+    <div class="section-divider center"></div>
+    <p class="section-sub center">We'd love to hear about your project. Fill in the form and we'll connect via WhatsApp.</p>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-info reveal-left">
+      <h3>Contact Details</h3>
+      <div class="contact-detail">
+        <div class="contact-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3-8.63A2 2 0 0 1 3.69 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 5.8 5.8l1.19-1.19a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16z"/></svg>
+        </div>
+        <div class="contact-detail-text">
+          <strong>Phone</strong>
+          <a href="tel:+919944841833">+91 99448 41833</a>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+        </div>
+        <div class="contact-detail-text">
+          <strong>WhatsApp</strong>
+          <a href="https://wa.me/919944841833" target="_blank" rel="noopener">+91 99448 41833</a>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div class="contact-detail-text">
+          <strong>Studio Location</strong>
+          <span>Nungambakkam, Chennai, Tamil Nadu</span>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div class="contact-detail-text">
+          <strong>Google Rating</strong>
+          <span>★★★★★ 5.0 · 26 Reviews</span>
+        </div>
+      </div>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15546.823!2d80.2357!3d13.0532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266d2e3f29fd5%3A0x0!2sNungambakkam%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1699000000000!5m2!1sen!2sin"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Harmony De Siigns Location - Nungambakkam Chennai">
+        </iframe>
+      </div>
+    </div>
+
+    <div class="inquiry-form reveal-right">
+      <h3>Send an Enquiry</h3>
+      <p style="font-family:var(--ff-body);font-size:0.83rem;color:var(--grey);margin-bottom:28px;line-height:1.7">Fill in your details and we'll open WhatsApp with a pre-filled message so you can connect instantly.</p>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="fname">Your Name</label>
+          <input type="text" id="fname" placeholder="Eg. Ramesh Kumar" />
+        </div>
+        <div class="form-group">
+          <label for="fphone">Phone Number</label>
+          <input type="tel" id="fphone" placeholder="+91 98765 43210" />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="fbudget">Budget Range</label>
+          <select id="fbudget">
+            <option value="">Select budget</option>
+            <option>₹5 – 10 Lakhs</option>
+            <option>₹10 – 20 Lakhs</option>
+            <option>₹20 – 40 Lakhs</option>
+            <option>₹40 – 80 Lakhs</option>
+            <option>₹80 Lakhs+</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="ftype">Type of Work</label>
+          <select id="ftype">
+            <option value="">Select type</option>
+            <option>Full Home Interior</option>
+            <option>Modular Kitchen</option>
+            <option>Living Room</option>
+            <option>Bedroom</option>
+            <option>Pooja Room</option>
+            <option>Dining Area</option>
+            <option>Renovation</option>
+            <option>3D Visualisation</option>
+            <option>Turnkey Project</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="fmsg">Message</label>
+        <textarea id="fmsg" placeholder="Tell us about your project — property size, location, specific requirements..."></textarea>
+      </div>
+      <button class="btn-submit" onclick="submitEnquiry()">Send via WhatsApp →</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo-text">Harmony De Siigns</div>
+      <span class="footer-logo-tag">Creating Harmony At Home</span>
+      <p class="footer-desc">A premium interior design studio in Nungambakkam, Chennai — crafting spaces of extraordinary beauty, precision and timeless elegance since our founding.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Residential Interiors</a></li>
+        <li><a href="#services">Modular Kitchen</a></li>
+        <li><a href="#services">Pooja Rooms</a></li>
+        <li><a href="#services">Turnkey Projects</a></li>
+        <li><a href="#services">3D Visualisation</a></li>
+        <li><a href="#services">Renovation</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2025 Harmony De Siigns · Nungambakkam, Chennai · All rights reserved</p>
+    <div class="footer-rating">
+      <span class="footer-stars">★★★★★</span>
+      <span class="footer-rating-text">5.0 on Google · 26 Reviews</span>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<a class="wa-float" href="https://wa.me/919944841833?text=Hello%20Harmony%20De%20Siigns%2C%20I%20would%20like%20to%20discuss%20my%20interior%20project." target="_blank" rel="noopener" aria-label="WhatsApp Harmony De Siigns">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+  </svg>
+</a>
+
+<script>
+  // ─── LOADER ───────────────────────────────────────
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.getElementById('loader').classList.add('hidden');
+    }, 2000);
+  });
+
+  // ─── NAV SCROLL ───────────────────────────────────
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // ─── HAMBURGER ────────────────────────────────────
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+  });
+  function closeMenu() {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+  }
+
+  // ─── HERO SLIDESHOW ───────────────────────────────
+  const heroSlides = document.querySelectorAll('.hero-slide');
+  let heroIdx = 0;
+  setInterval(() => {
+    heroSlides[heroIdx].classList.remove('active');
+    heroIdx = (heroIdx + 1) % heroSlides.length;
+    heroSlides[heroIdx].classList.add('active');
+  }, 5000);
+
+  // ─── SCROLL REVEAL ────────────────────────────────
+  const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
+        revealObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => revealObserver.observe(el));
+
+  // ─── GALLERY FILTER ───────────────────────────────
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      document.querySelectorAll('.gallery-item').forEach(item => {
+        if (filter === 'all' || item.dataset.cat === filter) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // ─── LIGHTBOX ─────────────────────────────────────
+  function openLightbox(el) {
+    const img = el.querySelector('img');
+    document.getElementById('lightboxImg').src = img.src;
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.getElementById('lightbox').addEventListener('click', function(e) {
+    if (e.target === this) closeLightbox();
+  });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+  // ─── TESTIMONIALS ─────────────────────────────────
+  const slides = document.querySelectorAll('.testi-slide');
+  let testiIdx = 0;
+  const dotsContainer = document.getElementById('testiDots');
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'testi-dot' + (i === 0 ? ' active' : '');
+    dot.addEventListener('click', () => goToSlide(i));
+    dotsContainer.appendChild(dot);
+  });
+  function goToSlide(idx) {
+    slides[testiIdx].classList.remove('active');
+    document.querySelectorAll('.testi-dot')[testiIdx].classList.remove('active');
+    testiIdx = (idx + slides.length) % slides.length;
+    slides[testiIdx].classList.add('active');
+    document.querySelectorAll('.testi-dot')[testiIdx].classList.add('active');
+  }
+  function changeSlide(dir) { goToSlide(testiIdx + dir); }
+  setInterval(() => changeSlide(1), 6000);
+
+  // ─── WHATSAPP FORM ────────────────────────────────
+  function submitEnquiry() {
+    const name   = document.getElementById('fname').value.trim() || 'Not provided';
+    const phone  = document.getElementById('fphone').value.trim() || 'Not provided';
+    const budget = document.getElementById('fbudget').value || 'Not specified';
+    const type   = document.getElementById('ftype').value || 'Not specified';
+    const msg    = document.getElementById('fmsg').value.trim() || 'No additional message';
+    const text = `Hello Harmony De Siigns,\n\nI am interested in discussing my interior project.\n\nName: ${name}\nPhone: ${phone}\nBudget: ${budget}\nType Of Work: ${type}\nMessage: ${msg}\n\nPlease contact me.`;
+    const url = 'https://wa.me/919944841833?text=' + encodeURIComponent(text);
+    window.open(url, '_blank');
+  }
+</script>
+</body>
+</html>
